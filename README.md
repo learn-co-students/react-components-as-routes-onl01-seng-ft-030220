@@ -77,8 +77,7 @@ npm install react-router-dom
 
 To start implementing routes, we first need to import `BrowserRouter` and `Route` from
 `react-router-dom`. `BrowserRouter` is commonly renamed as `Router`, so we'll follow this
-convention, as well. We can create an _alias_ with the syntax `BrowserRouter as Router`. 
-So every time we refer to `Router` in this file, we are really just refering to `BrowserRouter`.
+convention, as well. We can create an _alias_ with the syntax `BrowserRouter as Router`. So every time we refer to `Router`, in this file, we are really just refering to `BrowserRouter`.
 
 ```javascript
 // .src/index.js
@@ -168,7 +167,7 @@ const Login = () => {
 };
 ```
 
-Now let's add our `/about` and `/login` routes to our router:
+Following, let's add our `/about` and `/login` routes to our router:
 
 ```javascript
 // ./src/index.js
@@ -206,7 +205,7 @@ ReactDOM.render((
 );
 ```
 
-Let's go back to the browser and verify that our application is back to
+Let's go back to the browser and assert that our application is back to
 functioning. We see that our `Home` component is displaying. Try manually
 typing in the URL locations for `/`, `/about`, and `/login`. Do you see the
 other components rendering?
@@ -246,7 +245,7 @@ We have made great progress so far!
 
 If we look closely at our `Route`s, we see that our 'components' being passed to
 the `component` prop are merely functions defined above that return JSX. If we
-preferred, we could instead use the `render` prop and write inline code directly
+prefered, we could instead use the `render` prop and write inline code directly
 in our `Route`:
 
 ```javascript
@@ -254,7 +253,7 @@ in our `Route`:
 ```
 
 While this inline style may be useful for very simple renders, it becomes
-unreasonable when we want to render larger, more complex components, but this 
+unreasonable when we want to render larger, more complex, components, but this 
 shows that we can be pretty flexible in how we set up our `Route`s.
 
 If you are interested in seeing the 'under the hood' differences between the
@@ -270,10 +269,10 @@ bar.
 What good are routes, if users don't know how to find them or what they are?
 
 The React Router API provides two components that enable us to trigger our
-routing: `Link` and `NavLink`. They both have the same base level functionality:
-they update the browser URL and render the `Route` component. `NavLink` acts 
-as a superset of `Link`, adding styling attributes to a rendered element when 
-it matches the current URL.
+routing: `Link` and `NavLink`. They both have the same base level functionality
+that will update the browser URL and render the `Route` component. `NavLink`
+acts as a superset of `Link`, adding styling attributes to a rendered element
+when it matches the current URL.
 
 Let's work on adding in the `NavLink` component to our application:
 
@@ -345,12 +344,12 @@ const Login = () =>
 
 ReactDOM.render((
   <Router>
-    <div>
+    <divt>
       <Navbar />
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/login" component={Login} />
-    </div>
+    </divt>
   </Router>),
   document.getElementById('root')
 );
@@ -501,3 +500,4 @@ ReactDOM.render((
 [route_docs]: https://reacttraining.com/react-router/web/api/Route
 [soils]: https://en.wikipedia.org/wiki/Soil_type
 
+<p class='util--hide'>View <a href='https://learn.co/lessons/react-components-as-routes'>React Components As Routes</a> on Learn.co and start learning to code for free.</p>
